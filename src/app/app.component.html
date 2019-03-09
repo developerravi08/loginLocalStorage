@@ -1,9 +1,21 @@
 <!-- <router-outlet></router-outlet> -->
 
-<h1>Hello i18n!</h1>
-<h1 i18n>Hello i18n!</h1>
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
 
-
-<app-add [addVal]="addVal"></app-add>
-<app-remove #addVal></app-remove>
-<app-page1></app-page1>
+<!-- main app container -->
+<div class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3 jumbotron">
+                <alert></alert>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
